@@ -29,6 +29,8 @@ alias gcl="git clone"
 alias gc="git checkout"
 alias gcb="git checkout -b"
 
+alias tl="tig log"
+
 # TMUX
 alias tm="tmux"
 alias tml="tmux ls"
@@ -46,3 +48,4 @@ alias brdmp="brew bundle dump --force --file=~/.brewfile"
 # DOCKER
 alias dc="docker-compose"
 alias dps="docker ps -a"
+
