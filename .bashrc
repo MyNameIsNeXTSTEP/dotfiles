@@ -25,6 +25,8 @@ alias gcom="git commit"
 alias gpl="git pull"
 alias gps="git push"
 alias gcl="git clone"
+alias gc="git checkout"
+alias gcb="git checkout -b"
 
 # TMUX
 alias tm="tmux"
@@ -40,3 +42,6 @@ alias br="brew"
 alias bri="brew install"
 alias brdmp="brew bundle dump --force --file=~/.brewfile"
 
+# DOCKER
+alias dc="docker-compose"
+alias dps="docker ps -a"
