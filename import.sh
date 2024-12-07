@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cp ~/.brewfile ./.brewfile
+brew bundle dump --force --file=~/.brewfile && cp ~/.brewfile ./.brewfile
 cp ~/.bashrc ./bashrc
 cp ~/.tmux.conf ./tmux.conf
-cp -r ~/.config/nvim ./nvim
+rm -drf .config && mkdir .config && cp -r ~/.config/nvim .config/nvim
