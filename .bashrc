@@ -1,6 +1,7 @@
 # SYSTEM
 alias ee=exit
 alias cl=clear
+alias ran=ranger
 function copy
     if test (count $argv) -eq 1
         cat $argv[1] | pbcopy
@@ -15,6 +16,19 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# YARN
+alias yi="yarn install"
+alias ya="yarn add"
+alias yw="yarn workspaces"
+alias ywl="yarn workspaces list"
+function yf
+    if test (count $argv) -eq 1
+        fish -c "yarn workspaces focus $argv[1]"
+    else
+        echo "Usage: Need to provide <yarn workspace name>"
+    end
+end
+
 # SHELL
 alias f=fish
 
@@ -27,6 +41,9 @@ alias gps="git push"
 alias gcl="git clone"
 alias gc="git checkout"
 alias gcb="git checkout -b"
+alias gb="git branch"
+
+alias tl="tig log"
 
 # TMUX
 alias tm="tmux"
@@ -45,3 +62,4 @@ alias brdmp="brew bundle dump --force --file=~/.brewfile"
 # DOCKER
 alias dc="docker-compose"
 alias dps="docker ps -a"
+
