@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 # YARN
 alias yi="yarn install"
 alias ya="yarn add"
-alias yw="yarn workspaces"
+alias yw="yarn workspace"
 alias ywl="yarn workspaces list"
 function yf
     if test (count $argv) -eq 1
@@ -38,11 +38,22 @@ alias ga="git add"
 alias gcom="git commit"
 alias gpl="git pull"
 alias gps="git push"
+alias gpso="git push --set-upstream origin"
 alias gcl="git clone"
 alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
+alias gr="git rebase"
+alias gcp="git cherry-pick"
+alias gcm="git checkout main"
+alias gs="git stash"
+alias gsl="git stash list"
+alias gsps="git stash push"
+alias gspp="git stash pop"
+alias gsa="git stash apply"
+alias gcoman="gcom --amend --no-edit"
 
+# TIG
 alias tl="tig log"
 
 # TMUX
@@ -62,4 +73,5 @@ alias brdmp="brew bundle dump --force --file=~/.brewfile"
 # DOCKER
 alias dc="docker-compose"
 alias dps="docker ps -a"
-
+alias dcu="docker-compose up"
+alias dcub="docker-compose up --build"
