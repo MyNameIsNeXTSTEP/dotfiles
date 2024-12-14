@@ -10,6 +10,10 @@ function copy
     end
 end
 
+alias desk="cd $HOME/Desktop"
+alias pjs="cd $HOME/Desktop/Projects"
+alias work="cd $HOME/Desktop/Work"
+
 # NVM & NODE
 export NVM_DIR=~/.nvm
 export NVM_DIR="$HOME/.nvm"
@@ -74,4 +78,5 @@ alias brdmp="brew bundle dump --force --file=~/.brewfile"
 alias dc="docker-compose"
 alias dps="docker ps -a"
 alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
 alias dcub="docker-compose up --build"
