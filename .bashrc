@@ -48,6 +48,7 @@ alias gc="git checkout"
 alias gcb="git checkout -b"
 alias gb="git branch"
 alias gr="git rebase"
+alias gf="git fetch"
 alias gcp="git cherry-pick"
 alias gcm="git checkout main"
 alias gs="git stash"
@@ -56,6 +57,15 @@ alias gsps="git stash push"
 alias gspp="git stash pop"
 alias gsa="git stash apply"
 alias gcoman="gcom --amend --no-edit"
+
+# Command to add and commit all changes with a provided message
+function gcomall
+    if test (count $argv) -eq 1
+        fish -c "git add . && git commit -m $argv[1]"
+    else
+        echo "Usage: Need to provide a git commit message"
+    end
+end
 
 # TIG
 alias tl="tig log"
