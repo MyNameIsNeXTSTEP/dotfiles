@@ -61,7 +61,7 @@ alias gcoman="gcom --amend --no-edit"
 # Command to add and commit all changes with a provided message
 function gcomall
     if test (count $argv) -eq 1
-        fish -c "git add . && git commit -m $argv[1]"
+        fish -c "git add . && git commit -m '$argv[1]'"
     else
         echo "Usage: Need to provide a git commit message"
     end
@@ -90,3 +90,4 @@ alias dps="docker ps -a"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcub="docker-compose up --build"
+alias dcdwnvl="docker-compose down --volumes"
