@@ -86,6 +86,9 @@ alias brdmp="brew bundle dump --force --file=~/.brewfile"
 
 # DOCKER
 alias dc="docker-compose"
+alias dil="docker image ls"
+alias drmi="docker rmi"
+alias drm="docekr rm"
 alias dps="docker ps -a"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
