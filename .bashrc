@@ -1,7 +1,10 @@
 # SYSTEM
+alias l=ll
 alias ee=exit
 alias cl=clear
+alias r=ranger
 alias ran=ranger
+alias net="networkQuality -v"
 function copy
     if test (count $argv) -eq 1
         cat $argv[1] | pbcopy
@@ -35,6 +38,10 @@ end
 
 # SHELL
 alias f=fish
+function ls
+    command ls --color=always $argv
+end
+funcsave ls
 
 # GIT
 alias gt="git status"
@@ -53,7 +60,7 @@ alias gcp="git cherry-pick"
 alias gcm="git checkout main"
 alias gs="git stash"
 alias gsl="git stash list"
-alias gsps="git stash push"
+alias gsps="git stash push -u -m"
 alias gspp="git stash pop"
 alias gsa="git stash apply"
 alias gcoman="gcom --amend --no-edit"
@@ -81,7 +88,7 @@ alias n="~/nvim-macos-arm64/bin/nvim"
 
 # BREW
 alias br="brew"
-alias bri="brew install"
+alias bri="HOMEBREW_NO_AUTO_UPDATE=1 brew install"
 alias brdmp="brew bundle dump --force --file=~/.brewfile"
 
 # DOCKER
@@ -97,3 +104,12 @@ alias dcubd="docker-compose up -d --build"
 alias dcdwnvl="docker-compose down --volumes"
 alias drmall="docker rm -v -f $(docker ps -qa)"
 alias dcubd-service="docker-compose up -d --no-deps --build"
+
+# PYTHON
+alias c-venv="python3 -m venv ."
+alias s-venv="source ./bin/activate.fish"
+alias pipi="pip3 install"
+# Command to create and source the venv
+function cs-venvfish
+    fish -c "cvenv && svenv"
+end
