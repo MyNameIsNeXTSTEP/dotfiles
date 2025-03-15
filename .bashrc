@@ -36,6 +36,10 @@ function yf
     end
 end
 
+# NPM
+alias nrd="npm run dev"
+alias ni="npm install"
+
 # SHELL
 alias f=fish
 function ls
