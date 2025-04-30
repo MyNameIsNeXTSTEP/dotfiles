@@ -1,4 +1,5 @@
 # SYSTEM
+alias lports='sudo lsof -iTCP -sTCP:LISTEN -P -n' # get list of LISTENING ports
 alias l=ll
 alias ee=exit
 alias cl=clear
@@ -117,3 +118,5 @@ alias pipi="pip3 install"
 function cs-venvfish
     fish -c "cvenv && svenv"
 end
+
+. "$HOME/.local/bin/env"
