@@ -71,6 +71,8 @@ alias gsps="git stash push -u -m"
 alias gspp="git stash pop"
 alias gsa="git stash apply"
 alias gcoman="gcom --amend --no-edit"
+alias gtag='git tag -a'
+alias glt='git tag'
 
 # Command to add and commit all changes with a provided message
 function gcomall
