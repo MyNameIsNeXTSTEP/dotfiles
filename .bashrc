@@ -1,4 +1,6 @@
 # SYSTEM
+alias hs='history'
+alias finh='history | rg' # Find in history
 alias lports='sudo lsof -iTCP -sTCP:LISTEN -P -n' # get list of LISTENING ports
 alias l=ll
 alias ee=exit
