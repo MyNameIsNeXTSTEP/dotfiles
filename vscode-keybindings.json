@@ -52,5 +52,10 @@
     "key": "cmd+[",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
   }  
 ]
