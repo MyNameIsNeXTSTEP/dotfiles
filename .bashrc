@@ -1,4 +1,5 @@
 # SYSTEM
+alias o='open'
 alias hs='history'
 alias finh='history | rg' # Find in history
 alias lports='sudo lsof -iTCP -sTCP:LISTEN -P -n' # get list of LISTENING ports
@@ -21,6 +22,7 @@ alias pjs="cd $HOME/Desktop/Projects"
 alias work="cd $HOME/Desktop/Work"
 
 # NVM & NODE
+alias pn='pnpm'
 export NVM_DIR=~/.nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
