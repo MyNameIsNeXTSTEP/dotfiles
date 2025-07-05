@@ -126,3 +126,6 @@ function cs-venvfish
 end
 
 . "$HOME/.local/bin/env"
+
+# AI
+alias cld='claude'
