@@ -1,4 +1,5 @@
 # SYSTEM
+alias tr='tree'
 alias o='open'
 alias hs='history'
 alias finh='history | rg' # Find in history
