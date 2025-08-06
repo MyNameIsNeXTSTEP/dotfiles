@@ -1,5 +1,5 @@
 # SYSTEM
-alias tr='tree'
+alias tr='tree -C'
 alias o='open'
 alias hs='history'
 alias finh='history | rg' # Find in history
@@ -130,3 +130,12 @@ end
 
 # AI
 alias cld='claude'
+
+# PostgreSQL
+function pg
+    if test (count $argv) -eq 1
+        fish -c "pgcli postgres://postgres:postgres@localhost:5432/'$argv[1]'"
+    else
+        echo "Usage: Need to provide a DB name"
+    end
+end
