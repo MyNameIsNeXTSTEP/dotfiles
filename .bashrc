@@ -9,7 +9,6 @@ alias ee=exit
 alias cl=clear
 alias r=ranger
 alias ran=ranger
-alias net="networkQuality -v"
 function copy
     if test (count $argv) -eq 1
         cat $argv[1] | pbcopy
@@ -130,6 +129,7 @@ end
 
 # AI
 alias cld='claude'
+alias ca='cursor-agent'
 
 # PostgreSQL
 function pg
@@ -139,3 +139,17 @@ function pg
         echo "Usage: Need to provide a DB name"
     end
 end
+
+# Network
+alias net="networkQuality -v"
+
+function getnetpassw
+    if test (count $argv) -eq 1
+        fish -c "security find-generic-password -ga "$argv[1]" | grep "password:""
+    else
+      echo "Usage: Need to provide a network name"
+    end
+end
+
+# Content work
+alias obs='open ~/Movies/obs'
