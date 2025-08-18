@@ -16,6 +16,7 @@ function copy
         echo "Usage: copy <filename>"
     end
 end
+alias lz='lazydocker'
 
 alias desk="cd $HOME/Desktop"
 alias pjs="cd $HOME/Desktop/Projects"
