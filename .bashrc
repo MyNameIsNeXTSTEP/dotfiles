@@ -1,3 +1,5 @@
+# SSH
+
 # SYSTEM
 alias tr='tree -C'
 alias o='open'
@@ -108,7 +110,8 @@ alias dc="docker-compose"
 alias dil="docker image ls"
 alias drmi="docker rmi"
 alias drm="docker rm"
-alias dps="docker ps -a"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 alias dcub="docker-compose up --build"
