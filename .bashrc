@@ -18,6 +18,14 @@ function copy
         echo "Usage: copy <filename>"
     end
 end
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
 alias lz='lazydocker'
 
 alias desk="cd $HOME/Desktop"
@@ -85,6 +93,15 @@ function gcomall
         fish -c "git add . && git commit -m '$argv[1]'"
     else
         echo "Usage: Need to provide a git commit message"
+    end
+end
+
+# Command to start a branch from an issue using gh CLI
+function ghst
+    if test (count $argv) -eq 2
+        fish -c "gh issue develop $argv[1] --checkout --name '$argv[1]'/'$argv[2]'"
+    else
+        echo "Usage: Need to provide a gh issue ID and a branch name"
     end
 end
 
