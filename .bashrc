@@ -1,5 +1,3 @@
-# SSH
-
 # SYSTEM
 alias tr='tree -C'
 alias o='open'
@@ -86,6 +84,7 @@ alias gsa="git stash apply"
 alias gcoman="gcom --amend --no-edit"
 alias gtag='git tag -a'
 alias glt='git tag'
+alias gdub='git branch | grep -v "dev" | grep -v "main" | grep -v "master" | grep -v "prod" | xargs git branch -D'
 
 # Command to add and commit all changes with a provided message
 function gcomall
