@@ -86,6 +86,15 @@ alias gtag='git tag -a'
 alias glt='git tag'
 alias gdub='git branch | grep -v "dev" | grep -v "main" | grep -v "master" | grep -v "prod" | xargs git branch -D'
 
+# Command to list all the commits from the current branch that are not in the specified one (main, dev, master)
+function glc
+    if test (count $argv) -eq 1
+        fish -c "git log --no-merges $argv[1]..HEAD --oneline"
+    else
+        fish -c "git log --no-merges main..HEAD --oneline"
+    end
+end
+
 # Command to add and commit all changes with a provided message
 function gcomall
     if test (count $argv) -eq 1
