@@ -1,4 +1,7 @@
+# SSH
+
 # SYSTEM
+alias vpns='scutil --nc list'
 alias tr='tree -C'
 alias o='open'
 alias hs='history'
@@ -62,6 +65,7 @@ end
 funcsave ls
 
 # GIT
+alias gd='git diff'
 alias gt="git status"
 alias ga="git add"
 alias gcom="git commit"
@@ -85,6 +89,8 @@ alias gcoman="gcom --amend --no-edit"
 alias gtag='git tag -a'
 alias glt='git tag'
 alias gdub='git branch | grep -v "dev" | grep -v "main" | grep -v "master" | grep -v "prod" | xargs git branch -D'
+alias ghil='gh issue list'
+alias ghcp='gh pr create'
 
 # Command to list all the commits from the current branch that are not in the specified one (main, dev, master)
 function glc
