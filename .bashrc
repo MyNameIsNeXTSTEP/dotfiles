@@ -1,6 +1,28 @@
 # SSH
+alias racknerd1='ssh root@107.172.78.18'
 
 # SYSTEM
+alias cf='cloudflared'
+
+### HINTS
+# cloudflared tunnel login
+# cloudflared tunnel create dev
+# cloudflared tunnel run dev
+# cloudflared tunnel run --protocol http2 dev
+# cloudflared tunnel --url http://localhost:3000
+# cloudflared tunnel route dns dev dev.mycustomdomain.org
+# cloudflared tunnel list
+# cloudflared tunnel route dns dev mycustomdomain.org
+###
+
+# FABRIC
+# alias fb='fabric'
+# Golang environment variables
+# export GOROOT=$(brew --prefix go)/libexec
+# export GOPATH=$HOME/go
+# export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
+
+alias cx='codex'
 alias vpns='scutil --nc list'
 alias tr='tree -C'
 alias o='open'
@@ -177,6 +199,8 @@ end
 
 # Network
 alias net="networkQuality -v"
+alias py="ping ya.ru"
+alias wami="curl ipinfo.io/json | jq"
 
 function getnetpassw
     if test (count $argv) -eq 1
