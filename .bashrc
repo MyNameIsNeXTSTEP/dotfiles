@@ -200,7 +200,7 @@ end
 # Network
 alias net="networkQuality -v"
 alias py="ping ya.ru"
-alias wami="curl ipinfo.io/json | jq"
+alias wami="curl http://ip-api.com"
 
 function getnetpassw
     if test (count $argv) -eq 1
